@@ -13,11 +13,17 @@
       </button>
     </div>
     <div class="quantity-control">
-      <button class="btn btn-sm btn-outline-secondary btn-quantity">
+      <button 
+        class="btn btn-sm btn-outline-secondary btn-quantity"
+        @click="cartStore.decrementQty(props.item.id)"
+      >
         <i class="bi bi-dash"></i>
       </button>
-      <span class="fw-bold">1</span>
-      <button class="btn btn-sm btn-outline-secondary btn-quantity">
+      <span class="fw-bold">{{ props.item.qty }}</span>
+      <button 
+        class="btn btn-sm btn-outline-secondary btn-quantity"
+        @click="cartStore.incrementQty(props.item.id)"
+      >
         <i class="bi bi-plus"></i>
       </button>
       <span class="ms-auto text-muted">{{ formatPrice(props.item.price * props.item.qty) }}</span>
