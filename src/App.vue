@@ -14,94 +14,7 @@
     <div class="row g-4">
       <!-- Coluna Esquerda: Lista de Produtos -->
       <div class="col-lg-8">
-        <div class="card">
-          <div class="card-header bg-primary text-white">
-            <h5 class="mb-0"><i class="bi bi-box-seam"></i> Produtos Disponíveis</h5>
-          </div>
-          <div class="card-body">
-            <div class="row g-3">
-              <!-- Produto 1 -->
-              <div class="col-md-6">
-                <div class="card product-card h-100">
-                  <img src="/images/laptop.webp" class="card-img-top" alt="Notebook Gamer">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Notebook Gamer</h5>
-                    <p class="card-text text-muted small">Notebook com placa de vídeo dedicada, ideal para jogos e
-                      trabalho pesado.</p>
-                    <div class="mt-auto">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="h4 mb-0 text-primary">R$ 3.999,00</span>
-                      </div>
-                      <button class="btn btn-primary w-100">
-                        <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Produto 2 -->
-              <div class="col-md-6">
-                <div class="card product-card h-100">
-                  <img src="/images/mouse.webp" class="card-img-top" alt="Mouse Gamer RGB">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Mouse Gamer RGB</h5>
-                    <p class="card-text text-muted small">Mouse com iluminação RGB, 7 botões programáveis e DPI
-                      ajustável.</p>
-                    <div class="mt-auto">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="h4 mb-0 text-primary">R$ 299,00</span>
-                      </div>
-                      <button class="btn btn-primary w-100">
-                        <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Produto 3 -->
-              <div class="col-md-6">
-                <div class="card product-card h-100">
-                  <img src="/images/keyboard.webp" class="card-img-top" alt="Teclado Mecânico">
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Teclado Mecânico</h5>
-                    <p class="card-text text-muted small">Teclado mecânico com switches Cherry MX, iluminação RGB e cabo
-                      removível.</p>
-                    <div class="mt-auto">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="h4 mb-0 text-primary">R$ 599,00</span>
-                      </div>
-                      <button class="btn btn-primary w-100">
-                        <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Produto 4 -->
-              <div class="col-md-6">
-                <div class="card product-card h-100">
-                  <img src="/images/monitor.webp" class="card-img-top" alt='Monitor 27" 4K'>
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Monitor 27" 4K</h5>
-                    <p class="card-text text-muted small">Monitor Ultra HD com tecnologia IPS, 144Hz e suporte para HDR.
-                    </p>
-                    <div class="mt-auto">
-                      <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="h4 mb-0 text-primary">R$ 2.499,00</span>
-                      </div>
-                      <button class="btn btn-primary w-100">
-                        <i class="bi bi-cart-plus"></i> Adicionar ao Carrinho
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProductList/>
       </div>
 
       <!-- Coluna Direita: Carrinho -->
@@ -204,6 +117,7 @@
 </template>
 
 <script setup>
+import ProductList from './components/ProductList.vue';
 import {useCartStore} from './stores/cart'
 
 const cartStore = useCartStore()
